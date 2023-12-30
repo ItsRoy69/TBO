@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat,wght@1,100&family=Quattrocento&display=swap");
+
+.header,
+.about {
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center; /* Center the image */
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.headerinnerDiv {
+  text-align: center;
+}
+
+.title {
+  color: #fff;
+  text-shadow: 0px 4px 5px rgba(0, 0, 0, 0.71);
+  font-family: "Montserrat";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.subtitle {
+  color: #fff;
+  font-family: "Quattrocento";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration-line: underline;
+}
+
+.logo {
+  width: 100px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 10px;
+}
+
+.swipe-down-container {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.vertical-line {
+  width: 2px;
+  height: 100px;
+  background-color: white;
+  margin: 0 auto;
+}
