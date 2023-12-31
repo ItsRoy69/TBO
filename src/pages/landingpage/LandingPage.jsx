@@ -28,9 +28,9 @@ const LandingPage = () => {
     };
   }, []);
 
-  if (screenSize > 700) {
-    return <div>Please open in mobile.</div>;
-  }
+  // if (screenSize > 700) {
+  //   return <div>Please open in mobile.</div>;
+  // }
 
   const containerVariants = {
     hidden: { opacity: 0 },
