@@ -58,3 +58,13 @@
   background-color: white;
   margin: 0 auto;
 }
+
+.transparent{
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  width: 75vw;
+  height: 5vh;
+  font-size: medium;
+  padding: 0 15px;
+}

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import backgroundImage1 from "../../assets/landingpages/landingpage3.png";
 import backgroundImage2 from "../../assets/landingpages/landingpage4.png";
+import search from "../../assets/search.svg";
 import logoImage from "../../assets/LandingPages/Logo.png";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
@@ -78,13 +79,22 @@ const LandingPage2 = () => {
           }}
         >
           <div className="headerinnerDiv">
-            <motion.h3 className="title" variants={textVariants}>
+            <motion.h3 className="title text-3xl" variants={textVariants}>
               Find Rooms To Share In
             </motion.h3>
             <motion.h1 className="subtitle" variants={textVariants}>
-              Travel Buddies
+            <div className="flex mt-5">
+            <input
+             className="transparent z-0"
+             type="text"
+             placeholder=""
+             />
+             <img src={search} className="w-9 z-10 -ml-10" />
+            </div>
+            
             </motion.h1>
           </div>
+          <hr className="w-4/5 my-1 border-2 bg-white"/>
           <div className="swipe-down-container">
             <p style={{ color: "white", marginBottom: "10px" }}>Swipe Down</p>
             <div className="vertical-line"></div>{" "}
@@ -102,7 +112,7 @@ const LandingPage2 = () => {
           }}
           className="about"
         >
-          <h1>Popular Activities</h1>
+          <h1 className="text-white">Popular Activities</h1>
           <Carousel autoplay>
             {activities.map((activity, index) => (
               <div key={index} className="activity-item">
@@ -114,89 +124,7 @@ const LandingPage2 = () => {
             ))}
           </Carousel>
         </motion.div>
-        <motion.div
-          key="second"
-          variants={secondContainerVariants}
-          initial="hidden"
-          animate="visible"
-          exit="hidden"
-          style={{
-            background: `url(${backgroundImage2})`,
-          }}
-          className="about"
-        >
-          <h1>One Place for All Travel</h1>
-          <Carousel autoplay>
-            <div>
-              <div className="fourth-item">
-                <p>Join up</p>
-              </div>
-
-              <div className="fourth-item">
-                <img src="path_to_image1" alt="Image 1" />
-              </div>
-
-              <div className="fourth-item">
-                <img src="path_to_image2" alt="Image 2" />
-              </div>
-
-              <div className="fourth-item">
-                <p>Details of Place</p>
-              </div>
-            </div>
-            <div>
-              <div className="fourth-item">
-                <p>Join up</p>
-              </div>
-
-              <div className="fourth-item">
-                <img src="path_to_image1" alt="Image 1" />
-              </div>
-
-              <div className="fourth-item">
-                <img src="path_to_image2" alt="Image 2" />
-              </div>
-
-              <div className="fourth-item">
-                <p>Details of Place</p>
-              </div>
-            </div>
-            <div>
-              <div className="fourth-item">
-                <p>Join up</p>
-              </div>
-
-              <div className="fourth-item">
-                <img src="path_to_image1" alt="Image 1" />
-              </div>
-
-              <div className="fourth-item">
-                <img src="path_to_image2" alt="Image 2" />
-              </div>
-
-              <div className="fourth-item">
-                <p>Details of Place</p>
-              </div>
-            </div>
-            <div>
-              <div className="fourth-item">
-                <p>Join up</p>
-              </div>
-
-              <div className="fourth-item">
-                <img src="path_to_image1" alt="Image 1" />
-              </div>
-
-              <div className="fourth-item">
-                <img src="path_to_image2" alt="Image 2" />
-              </div>
-
-              <div className="fourth-item">
-                <p>Details of Place</p>
-              </div>
-            </div>
-          </Carousel>
-        </motion.div>
+       
       </div>
     </AnimatePresence>
   );
