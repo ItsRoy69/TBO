@@ -91,10 +91,10 @@ const LandingPage2 = () => {
              />
              <img src={search} className="w-9 z-10 -ml-10" />
             </div>
-            
+            <hr className="w-80 my-1 border-2 bg-white"/>
             </motion.h1>
           </div>
-          <hr className="w-4/5 my-1 border-2 bg-white"/>
+          
           <div className="swipe-down-container">
             <p style={{ color: "white", marginBottom: "10px" }}>Swipe Down</p>
             <div className="vertical-line"></div>{" "}
