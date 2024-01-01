@@ -4,7 +4,7 @@ import backgroundImage1 from "../../assets/landingpages/landingpage5.png";
 import backgroundImage2 from "../../assets/landingpages/landingpage6.png";
 import search from "../../assets/landingpages/search.svg";
 import locate from "../../assets/landingpages/locate.svg";
-import logoImage from "../../assets/LandingPages/Logo.png";
+import logoImage from "../../assets/landingpages/Logo.png";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import "./sharecabs.css";
