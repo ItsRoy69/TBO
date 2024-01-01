@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat,wght@1,100&family=Quattrocento&display=swap");
+
+.header,
+.about {
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center; /* Center the image */
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.headerinnerDiv {
+  text-align: center;
+}
+
+.title {
+  color: #fff;
+  text-shadow: 0px 4px 5px rgba(0, 0, 0, 0.71);
+  font-family: "Montserrat";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.subtitle {
+  color: #fff;
+  font-family: "Quattrocento";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration-line: underline;
+}
+.logodiv {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  align-items: center;
+}
+.logo {
+  width: 100px;
+  position: absolute;
+}
+
+.logotitle {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+}
+
+.swipe-down-container {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.vertical-line {
+  width: 2px;
+  height: 100px;
+  background-color: white;
+  margin: 0 auto;
+}
+.swipe {
+  position: absolute;
+}
+
+.cardContainer {
+  width: 90vw;
+  max-width: 260px;
+  height: 300px;
+}
+
+.card {
+  position: relative;
+  background-color: #fff;
+  width: 80vw;
+  max-width: 260px;
+  height: 300px;
+  box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s;
+}
+
+.cardContent {
+  width: 100%;
+  height: 100%;
+}
+
+.card h3 {
+  position: absolute;
+  bottom: 0;
+  margin: 10px;
+  color: #000000;
+}
+
+.infoText {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  color: #000000;
+  animation-name: popup;
+  animation-duration: 800ms;
+}
+
+.flipped {
+  transform: rotateY(180deg);
+}
+
+.backSide {
+  transform: rotateY(180deg);
+}

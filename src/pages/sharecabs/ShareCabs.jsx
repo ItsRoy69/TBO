@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import backgroundImage1 from "../../assets/landingpages/landingpage1.png";
-import backgroundImage2 from "../../assets/landingpages/landingpage2.png";
-import logoImage from "../../assets/landingpages/Logo.png";
+import backgroundImage1 from "../../assets/landingpages/landingpage5.png";
+import backgroundImage2 from "../../assets/landingpages/landingpage6.png";
+import search from "../../assets/landingpages/search.svg";
+import locate from "../../assets/landingpages/locate.svg";
+import logoImage from "../../assets/LandingPages/Logo.png";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import { Link } from "react-router-dom";
-import "./landingpage.css";
+import "./sharecabs.css";
 
-const LandingPage = () => {
+const ShareCabs = () => {
   const [scrolling, setScrolling] = useState(false);
   const screenSize = window.innerWidth;
 
@@ -79,13 +80,40 @@ const LandingPage = () => {
           }}
         >
           <div className="headerinnerDiv">
-            <motion.h3 className="title" variants={textVariants}>
-              I want to find
+            <motion.h3 className="title text-3xl" variants={textVariants}>
+              currently at
             </motion.h3>
             <motion.h1 className="subtitle" variants={textVariants}>
-              Travel Buddies
+            <div className="flex mt-5">
+            <input
+             className="transparent z-0"
+             type="text"
+             placeholder=""
+             />
+             <img src={locate} className="w-9 z-10 -ml-10" />
+            </div>
+            <hr className="w-80 my-1 border-2 bg-white"/>
             </motion.h1>
           </div>
+
+          <div className="headerinnerDiv mt-14">
+            <motion.h3 className="title text-3xl" variants={textVariants}>
+              want to go to
+            </motion.h3>
+            <motion.h1 className="subtitle" variants={textVariants}>
+            <div className="flex mt-5">
+            <input
+             className="transparent z-0"
+             type="text"
+             placeholder=""
+             />
+             <img src={search} className="w-9 z-10 -ml-10" />
+            </div>
+            <hr className="w-80 my-1 border-2 bg-white"/>
+            </motion.h1>
+          </div>
+
+
           <div className="swipe-down-container">
             <p style={{ color: "white", marginBottom: "10px" }}>Swipe Down</p>
             <div className="vertical-line"></div>{" "}
@@ -103,7 +131,7 @@ const LandingPage = () => {
           }}
           className="about"
         >
-          <h1>Popular Activities</h1>
+          <h1 className="text-white">Popular Activities</h1>
           <Carousel autoplay>
             {activities.map((activity, index) => (
               <div key={index} className="activity-item">
@@ -115,94 +143,10 @@ const LandingPage = () => {
             ))}
           </Carousel>
         </motion.div>
-        <motion.div
-          key="second"
-          variants={secondContainerVariants}
-          initial="hidden"
-          animate="visible"
-          exit="hidden"
-          style={{
-            background: `url(${backgroundImage2})`,
-          }}
-          className="about"
-        >
-          <h1>One Place for All Travel</h1>
-          <Carousel autoplay>
-            <div>
-              {" "}
-              <Link to="/sharerooms">
-                <div className="fourth-item">
-                  <p>Join up</p>
-                </div>{" "}
-              </Link>
-              <div className="fourth-item">
-                <img src="path_to_image1" alt="Image 1" />
-              </div>
-              <div className="fourth-item">
-                <img src="path_to_image2" alt="Image 2" />
-              </div>
-              <Link to="/sharerooms">
-                <div className="fourth-item">
-                  <p>Details of Place</p>
-                </div>
-              </Link>
-            </div>
-            <div>
-              <div className="fourth-item">
-                <p>Join up</p>
-              </div>
 
-              <div className="fourth-item">
-                <img src="path_to_image1" alt="Image 1" />
-              </div>
-
-              <div className="fourth-item">
-                <img src="path_to_image2" alt="Image 2" />
-              </div>
-
-              <div className="fourth-item">
-                <p>Details of Place</p>
-              </div>
-            </div>
-            <div>
-              <div className="fourth-item">
-                <p>Join up</p>
-              </div>
-
-              <div className="fourth-item">
-                <img src="path_to_image1" alt="Image 1" />
-              </div>
-
-              <div className="fourth-item">
-                <img src="path_to_image2" alt="Image 2" />
-              </div>
-
-              <div className="fourth-item">
-                <p>Details of Place</p>
-              </div>
-            </div>
-            <div>
-              <div className="fourth-item">
-                <p>Join up</p>
-              </div>
-
-              <div className="fourth-item">
-                <img src="path_to_image1" alt="Image 1" />
-              </div>
-
-              <div className="fourth-item">
-                <img src="path_to_image2" alt="Image 2" />
-              </div>
-
-              <div className="fourth-item">
-                <p>Details of Place</p>
-              </div>
-            </div>
-          </Carousel>
-        </motion.div>
       </div>
     </AnimatePresence>
   );
 };
 
-export default LandingPage;
+export default ShareCabs;
