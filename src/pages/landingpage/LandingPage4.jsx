@@ -13,6 +13,8 @@ import medical from "../../assets/medical.png";
 import hospital from "../../assets/hospital.png";
 import police from "../../assets/police.png";
 
+import Map from "../../components/Map";
+
 const LandingPage4 = () => {
   const [scrolling, setScrolling] = useState(false);
   const screenSize = window.innerWidth;
@@ -125,18 +127,8 @@ const LandingPage4 = () => {
           style={{
             background: `url(${backgroundImage2})`,
           }}
-          className="about">
-          <h1 className="text-white">Popular Activities</h1>
-          <Carousel autoplay>
-            {activities.map((activity, index) => (
-              <div key={index} className="activity-item">
-                <h2>{activity.title}</h2>
-                <p>{activity.description}</p>
-                <p>{activity.plan}</p>
-                <p>{activity.cost}</p>
-              </div>
-            ))}
-          </Carousel>
+          className="about flex justify-center px-10 ">
+          <Map className="w-3/4 "/>
         </motion.div>
       </div>
     </AnimatePresence>
