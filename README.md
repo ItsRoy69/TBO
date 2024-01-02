@@ -67,7 +67,3 @@ This will launch the Node.js backend server that fetches data from the Rick and 
 ```bash
 npm run dev
 ```
-
-### 3. Navigation
-
-- Users can easily navigate between the character list and detail pages.
