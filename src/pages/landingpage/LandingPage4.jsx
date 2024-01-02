@@ -9,6 +9,10 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import "./LandingPage.css";
 
+import call from "../../assets/call.svg";
+import direction from "../../assets/direction.svg";
+import reload from "../../assets/reload.svg";
+
 import medical from "../../assets/medical.png";
 import hospital from "../../assets/hospital.png";
 import police from "../../assets/police.png";
@@ -129,6 +133,17 @@ const LandingPage4 = () => {
           }}
           className="about flex justify-center px-10 ">
           <Map className="w-3/4 "/>
+          <div className="flex justify-center  mt-14">
+            <div className="flex items-center">
+            <img src={reload} className="w-16 mr-10" />
+            </div>
+            <div className="flex items-center">
+            <img src={direction} className="w-24 mx-10" />
+            </div>
+            <div className="flex items-center">
+            <img src={call} className="w-16 ml-10" />
+            </div>
+          </div>
         </motion.div>
       </div>
     </AnimatePresence>
